@@ -10,19 +10,19 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0"/>
-    <link rel="icon" href="http://zhaodj.github.io/favicon.ico">
-    <link rel="apple-touch-icon" href="http://zhaodj.github.io/apple-touch-icon.png" />
-    <link rel="stylesheet" href="http://zhaodj.github.io/css/style.css">
-    <link rel="stylesheet" href="http://zhaodj.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://zhaodj.github.io/css/monokai.css">
-    <link rel="stylesheet" href="http://zhaodj.github.io/fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0"/>
+    <link rel="icon" href="https://zhaodj.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://zhaodj.github.io/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://zhaodj.github.io/css/style.css">
+    <link rel="stylesheet" href="https://zhaodj.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://zhaodj.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://zhaodj.github.io/fancybox/jquery.fancybox.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Go语言GDB调试笔记" />
 <meta property="og:description" content="编译应用 go build -gcflags &quot;-N -l&quot; 运行GDB gdb demo -d &#39;$GOROOT&#39; 给指定方法设置断点 b github.com/demo/pkg.(*St).Fn 打印全局变量 需要加引号 p &#39;github.com/demo/pkg.Default&#39; 查看断点 info breakpoints 暂停断点 disable 1 启用断点 enable 1" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" />
+<meta property="og:url" content="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" />
 
 
 <meta property="og:updated_time" content="2016-09-09T13:52:47&#43;08:00"/>
@@ -75,16 +75,16 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="http://zhaodj.github.io/" id="logo">
+      <a href="https://zhaodj.github.io/" id="logo">
           
-          <i class="logo" style="background-image: url('http://zhaodj.github.io/css/images/logo.png')"></i>
+          <i class="logo" style="background-image: url('https://zhaodj.github.io/css/images/logo.png')"></i>
           
           <span class="site-title">找不到军</span>
       </a>
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="http://zhaodj.github.io/">首页</a>
+          <a class="main-nav-link" href="https://zhaodj.github.io/">首页</a>
           
           
           
@@ -98,17 +98,17 @@
           
           
           
-          <a class="main-nav-link" href="http://zhaodj.github.io/tags/">标签</a>
+          <a class="main-nav-link" href="https://zhaodj.github.io/tags/">标签</a>
           
           
           
-          <a class="main-nav-link" href="http://zhaodj.github.io/categories/">分类</a>
+          <a class="main-nav-link" href="https://zhaodj.github.io/categories/">分类</a>
           
           
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://zhaodj.github.io/images/avatar.jpeg"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://zhaodj.github.io/images/avatar.jpeg"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -116,7 +116,7 @@
               <input type="search" name="q" class="search-form-input" placeholder="搜索">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="q" value="site:http://zhaodj.github.io/">
+              <input type="hidden" name="q" value="site:https://zhaodj.github.io/">
          </form>
         </div>
     </div>
@@ -127,7 +127,7 @@
           <tr>
           
           
-          <td><a class="main-nav-link" href="http://zhaodj.github.io/">首页</a></td>
+          <td><a class="main-nav-link" href="https://zhaodj.github.io/">首页</a></td>
           
           
           
@@ -141,17 +141,17 @@
           
           
           
-          <td><a class="main-nav-link" href="http://zhaodj.github.io/tags/">标签</a></td>
+          <td><a class="main-nav-link" href="https://zhaodj.github.io/tags/">标签</a></td>
           
           
           
-          <td><a class="main-nav-link" href="http://zhaodj.github.io/categories/">分类</a></td>
+          <td><a class="main-nav-link" href="https://zhaodj.github.io/categories/">分类</a></td>
           
           
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="q" value="site:http://zhaodj.github.io/">
+          <input type="hidden" name="q" value="site:https://zhaodj.github.io/">
           </form>
         </td>
       </tr>
@@ -166,7 +166,7 @@
 	    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
-      <img id="avatar" src="http://zhaodj.github.io/images/avatar.jpeg">
+      <img id="avatar" src="https://zhaodj.github.io/images/avatar.jpeg">
       <h2 id="name">zhaodj</h2>
       <h3 id="title">程序员</h3>
       <span id="location"><i class="fa fa-map-marker"></i>北京</span>
@@ -265,7 +265,7 @@
             
 
             <header class="article-header">
-    <a href="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
+    <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
     <h1 class="article-title" itemprop="name">
         Go语言GDB调试笔记
     </h1>
@@ -289,7 +289,7 @@
             <div class="article-category">
                 <i class="fa fa-folder"></i>
                 
-                <a class="article-category-link" href="http://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">Go语言</a>
+                <a class="article-category-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">Go语言</a>
                 
                 
             </div>
@@ -302,10 +302,10 @@
             <div class="article-category">
                 <i class="fa fa-tags"></i>
                 
-                <a class="article-category-link" href="http://zhaodj.github.io/tags/go">Go</a>
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/go">Go</a>
                 &middot;
                 
-                <a class="article-category-link" href="http://zhaodj.github.io/tags/gdb">GDB</a>
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/gdb">GDB</a>
                 
                 
             </div>
@@ -356,12 +356,12 @@
 
             </div>
             <footer class="article-footer">
-    <a data-url="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" data-id="19f3b91b48120bd4b107cc78771bb090" class="article-share-link">
+    <a data-url="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" data-id="19f3b91b48120bd4b107cc78771bb090" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
     
-    <a href="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/#disqus_thread" class="article-comment-link">
+    <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/#disqus_thread" class="article-comment-link">
         评论
     </a>
     
@@ -444,9 +444,9 @@
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'daojunzhao';
-    var disqus_identifier = 'http:\/\/zhaodj.github.io\/2016\/09\/09\/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0';
+    var disqus_identifier = 'https:\/\/zhaodj.github.io\/2016\/09\/09\/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0';
     var disqus_title = 'Go语言GDB调试笔记';
-    var disqus_url = 'http:\/\/zhaodj.github.io\/2016\/09\/09\/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0';
+    var disqus_url = 'https:\/\/zhaodj.github.io\/2016\/09\/09\/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -474,7 +474,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="thumbnail">
+                    <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -484,13 +484,13 @@
                     
                     
                     <p class="item-category">
-                        <a class="article-category-link" href="http://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
+                        <a class="article-category-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
                         Go语言
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="title">Go语言GDB调试笔记</a></p>
+                    <p class="item-title"><a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="title">Go语言GDB调试笔记</a></p>
                     <p class="item-date">
                         <time datetime="2016-09-09 13:52:47 &#43;0800 CST" itemprop="datePublished">2016-09-09</time>
                     </p>
@@ -511,7 +511,7 @@
         <ul class="category-list">
             
             <li class="category-list-item">
-                <a class="category-list-link" href="http://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
+                <a class="category-list-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
                     go语言
                 </a>
                 <span class="category-list-count">1</span>
@@ -534,14 +534,14 @@
         <ul class="category-list">
             
             <li class="category-list-item">
-                <a class="category-list-link" href="http://zhaodj.github.io/tags/gdb">
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/gdb">
                     gdb
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
-                <a class="category-list-link" href="http://zhaodj.github.io/tags/go">
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/go">
                     go
                 </a>
                 <span class="category-list-count">1</span>
@@ -562,9 +562,9 @@
     </h3>
     <div class="widget tagcloud">
         
-        <a href="http://zhaodj.github.io/tags/gdb" style="font-size: 12px;">gdb</a>
+        <a href="https://zhaodj.github.io/tags/gdb" style="font-size: 12px;">gdb</a>
         
-        <a href="http://zhaodj.github.io/tags/go" style="font-size: 12px;">go</a>
+        <a href="https://zhaodj.github.io/tags/go" style="font-size: 12px;">go</a>
         
     </div>
 </div>
@@ -589,8 +589,8 @@
 </footer>
 
 
-<script src="http://zhaodj.github.io/fancybox/jquery.fancybox.pack.js"></script>
-<script src="http://zhaodj.github.io/js/script.js"></script>
+<script src="https://zhaodj.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://zhaodj.github.io/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
