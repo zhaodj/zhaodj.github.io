@@ -2,12 +2,97 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 找不到军</title>
-    <link>https://zhaodj.github.io/post/</link>
+    <link>https://zhaodj.github.io/post/index.xml</link>
     <description>Recent content in Posts on 找不到军</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Sep 2016 13:52:47 +0800</lastBuildDate>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Thu, 29 Dec 2016 20:28:00 +0800</lastBuildDate>
     <atom:link href="https://zhaodj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker 本地开发环境配置</title>
+      <link>https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</link>
+      <pubDate>Thu, 29 Dec 2016 20:28:00 +0800</pubDate>
+      
+      <guid>https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
+      <description>
+
+&lt;h2 id=&#34;安装-mysql&#34;&gt;安装 MySQL&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取-mysql-镜像&#34;&gt;获取 MySQL 镜像&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;docker pull mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;创建并运行-mysql-服务&#34;&gt;创建并运行 MySQL 服务&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run --name mysql-server -v /Users/zhaodaojun/Documents/data/mysql/data:/var/lib/mysql \
+-v /Users/zhaodaojun/Documents/data/mysql/conf:/etc/mysql/conf.d \
+-e MYSQL_ROOT_PASSWORD=pass -p 127.0.0.1:3306:3306 -d mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用宿主机的数据及配置目录，挂在到容器中&lt;/p&gt;
+
+&lt;h3 id=&#34;查看服务-ip&#34;&gt;查看服务 IP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;docker inspect mysql-server | grep IPAddress
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;创建并运行-mysql-客户端&#34;&gt;创建并运行 MySQL 客户端&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -it -v /Users/zhaodaojun/Downloads:/data --rm mysql:5.7 mysql -h 172.17.0.2 -u root -p
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://store.docker.com/images/3083290a-203f-4c04-b2de-cc057959d2c9?tab=description&#34;&gt;Docker Store mysql&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Debian apt key过期</title>
+      <link>https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F</link>
+      <pubDate>Thu, 29 Sep 2016 15:24:00 +0800</pubDate>
+      
+      <guid>https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F</guid>
+      <description>
+
+&lt;h2 id=&#34;查看apt-key&#34;&gt;查看apt-key&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-key list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;添加新的key&#34;&gt;添加新的key&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /tmp
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C语言GDB调试笔记</title>
+      <link>https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0</link>
+      <pubDate>Fri, 09 Sep 2016 13:52:47 +0800</pubDate>
+      
+      <guid>https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0</guid>
+      <description>
+
+&lt;h2 id=&#34;编译应用&#34;&gt;编译应用&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gcc -g insertion_sort.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;查看数组&#34;&gt;查看数组&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;p *arr@10
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Go语言GDB调试笔记</title>
@@ -25,6 +110,12 @@
 &lt;h2 id=&#34;运行gdb&#34;&gt;运行GDB&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gdb demo -d &#39;$GOROOT&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果报下面的错误，是因为 MacOS 运行 GDB 需要给 GDB 程序签名，&lt;a href=&#34;http://stackoverflow.com/questions/18423124/please-check-gdb-is-codesigned-see-taskgated8-how-to-get-gdb-installed-w&#34;&gt;操作步骤&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Unable to find Mach task port for process-id 40764: (os/kern) failure (0x5).
+ (please check gdb is codesigned - see taskgated(8))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;给指定方法设置断点&#34;&gt;给指定方法设置断点&lt;/h2&gt;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apt on 找不到军</title>
+    <link>https://zhaodj.github.io/tags/apt/index.xml</link>
+    <description>Recent content in Apt on 找不到军</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://zhaodj.github.io/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Debian apt key过期</title>
+      <link>https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F</link>
+      <pubDate>Thu, 29 Sep 2016 15:24:00 +0800</pubDate>
+      
+      <guid>https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F</guid>
+      <description>
+
+&lt;h2 id=&#34;查看apt-key&#34;&gt;查看apt-key&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-key list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;添加新的key&#34;&gt;添加新的key&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /tmp
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

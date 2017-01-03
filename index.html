@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <title>找不到军</title>
-    <meta name="generator" content="Hugo 0.16" />
+    <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="zhaodj">
@@ -15,11 +15,12 @@
     
     <link rel="canonical" href="https://zhaodj.github.io/"/>
     <link rel="icon" href="https://zhaodj.github.io/favicon.ico">
-    <link rel="apple-touch-icon" href="https://zhaodj.github.io/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="https://zhaodj.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://zhaodj.github.io/css/style.css">
     <link rel="stylesheet" href="https://zhaodj.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://zhaodj.github.io/css/monokai.css">
     <link rel="stylesheet" href="https://zhaodj.github.io/fancybox/jquery.fancybox.css">
+    
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="找不到军" />
@@ -28,7 +29,7 @@
 <meta property="og:url" content="https://zhaodj.github.io/" />
 
 
-<meta property="og:updated_time" content="2016-09-09T13:52:47&#43;08:00"/>
+<meta property="og:updated_time" content="2016-12-29T20:28:00&#43;08:00"/>
 
 
 
@@ -101,7 +102,7 @@
               <input type="search" name="q" class="search-form-input" placeholder="搜索">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="q" value="site:https://zhaodj.github.io/">
+              <input type="hidden" name="sitesearch" value="https://zhaodj.github.io/" />
          </form>
         </div>
     </div>
@@ -136,7 +137,7 @@
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="q" value="site:https://zhaodj.github.io/">
+          <input type="hidden" name="sitesearch" value="https://zhaodj.github.io/" />
           </form>
         </td>
       </tr>
@@ -162,12 +163,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        1
+        4
         <span>文章</span>
       </div>
       <div class="article-info-block">
         
-          2
+          8
         
         <span>
             标签
@@ -179,7 +180,6 @@
         <tr>
           
 <td><a href="//github.com/zhaodj" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
-
 
 
 
@@ -248,31 +248,32 @@
             </a>
 
             <header class="article-header">
-    <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
+    <a href="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">
     <h1 class="article-title" itemprop="name">
-        Go语言GDB调试笔记
+        Docker 本地开发环境配置
     </h1>
     </a>
     <div class="article-meta">
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2016-09-09 13:52:47 &#43;0800 CST" itemprop="datePublished">2016-09-09</time>
+            <time datetime="2016-12-29 20:28:00 &#43;0800 CST" itemprop="datePublished">2016-12-29</time>
             &middot;
-            27
+            56
             字
             &middot;
             1
             分钟阅读
         </div>
 
-        
+
         
             
             
             <div class="article-category">
                 <i class="fa fa-folder"></i>
                 
-                <a class="article-category-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">Go语言</a>
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/categories/%E5%AE%B9%E5%99%A8">容器</a>
                 
                 
             </div>
@@ -285,8 +286,313 @@
             <div class="article-category">
                 <i class="fa fa-tags"></i>
                 
-                <a class="article-category-link" href="https://zhaodj.github.io/tags/go">Go</a>
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/docker">Docker</a>
                 &middot;
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/mysql">MySQL</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    安装 MySQL 获取 MySQL 镜像 docker pull mysql:5.7  创建并运行 MySQL 服务 docker run &ndash;name mysql-server -v /Users/zhaodaojun/Documents/data/mysql/data:/var/lib/mysql \ -v /Users/zhaodaojun/Documents/data/mysql/conf:/etc/mysql/conf.d \ -e MYSQL_ROOT_PASSWORD=pass -p 127.0.0.1:3306:3306 -d mysql:5.7  使用宿主机的数据及配置目录，挂在到容器中
+查看服务 IP docker inspect mysql-server | grep IPAddress  创建并运行 MySQL 客户端 docker run -it -v /Users/zhaodaojun/Downloads:/data &ndash;rm mysql:5.7 mysql -h 172.17.0.2 -u root -p  参考  Docker Store mysql
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">
+                        查看全文
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" data-id="38525b76b2c341447e32120d2b51ae95" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+    <a href="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#disqus_thread" class="article-comment-link">
+        评论
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F">
+    <h1 class="article-title" itemprop="name">
+        Debian apt key过期
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-09-29 15:24:00 &#43;0800 CST" itemprop="datePublished">2016-09-29</time>
+            &middot;
+            13
+            字
+            &middot;
+            1
+            分钟阅读
+        </div>
+
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/categories/linux">Linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/debian">debian</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/apt">apt</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/linux">linux</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    查看apt-key sudo apt-key list  添加新的key cd /tmp wget <a href="http://nginx.org/keys/nginx_signing.key">http://nginx.org/keys/nginx_signing.key</a> sudo apt-key add nginx_signing.key
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F">
+                        查看全文
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F" data-id="4c1453f8339d85b8bf7091a0a73296b1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+    <a href="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F/#disqus_thread" class="article-comment-link">
+        评论
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
+    <h1 class="article-title" itemprop="name">
+        C语言GDB调试笔记
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-09-09 13:52:47 &#43;0800 CST" itemprop="datePublished">2016-09-09</time>
+            &middot;
+            7
+            字
+            &middot;
+            1
+            分钟阅读
+        </div>
+
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/categories/c%E8%AF%AD%E8%A8%80">C语言</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/c">C</a>
+                &middot;
+                
                 
                 <a class="article-category-link" href="https://zhaodj.github.io/tags/gdb">GDB</a>
                 
@@ -299,7 +605,158 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    编译应用 go build -gcflags &quot;-N -l&quot; 运行GDB gdb demo -d &lsquo;$GOROOT&rsquo; 给指定方法设置断点 b github.com/demo/pkg.(*St).Fn 打印全局变量 需要加引号 p &lsquo;github.com/demo/pkg.Default&rsquo; 查看断点 info breakpoints 暂停断点 disable 1 启用断点 enable 1
+                    编译应用 gcc -g insertion_sort.c  查看数组 p *arr@10
+                    <br>
+                </p>
+                <p class="article-more-link">
+                    <a href="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
+                        查看全文
+                    </a>
+                </p>
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" data-id="5fd36fe18d35a8ced3297bdbfec43f41" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+    <a href="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/#disqus_thread" class="article-comment-link">
+        评论
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+            </a>
+
+            <header class="article-header">
+    <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0">
+    <h1 class="article-title" itemprop="name">
+        Go语言GDB调试笔记
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-09-09 13:52:47 &#43;0800 CST" itemprop="datePublished">2016-09-09</time>
+            &middot;
+            54
+            字
+            &middot;
+            1
+            分钟阅读
+        </div>
+
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/categories/go%E8%AF%AD%E8%A8%80">Go语言</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/go">Go</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://zhaodj.github.io/tags/gdb">GDB</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    编译应用 go build -gcflags &quot;-N -l&quot;  运行GDB gdb demo -d &lsquo;$GOROOT&rsquo;  如果报下面的错误，是因为 MacOS 运行 GDB 需要给 GDB 程序签名，操作步骤
+Unable to find Mach task port for process-id 40764: (os/kern) failure (0x5). (please check gdb is codesigned - see taskgated(8))  给指定方法设置断点 b github.com/demo/pkg.(*St).Fn  打印全局变量 需要加引号
+p &lsquo;github.com/demo/pkg.Default&rsquo;  查看断点 info breakpoints  暂停断点 disable 1  启用断点 enable 1
                     <br>
                 </p>
                 <p class="article-more-link">
@@ -407,6 +864,84 @@
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://zhaodj.github.io/categories/%E5%AE%B9%E5%99%A8">
+                        容器
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhaodj.github.io/2016/12/29/docker-%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" class="title">Docker 本地开发环境配置</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-12-29 20:28:00 &#43;0800 CST" itemprop="datePublished">2016-12-29</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://zhaodj.github.io/categories/linux">
+                        Linux
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhaodj.github.io/2016/09/29/debian-apt-key%E8%BF%87%E6%9C%9F" class="title">Debian apt key过期</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-09-29 15:24:00 &#43;0800 CST" itemprop="datePublished">2016-09-29</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://zhaodj.github.io/categories/c%E8%AF%AD%E8%A8%80">
+                        C语言
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhaodj.github.io/2016/09/09/c%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="title">C语言GDB调试笔记</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-09-09 13:52:47 &#43;0800 CST" itemprop="datePublished">2016-09-09</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://zhaodj.github.io/2016/09/09/go%E8%AF%AD%E8%A8%80gdb%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -417,7 +952,8 @@
                     
                     
                     <p class="item-category">
-                        <a class="article-category-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
+                        
+                        <a class="article-category-link" href="https://zhaodj.github.io/categories/go%E8%AF%AD%E8%A8%80">
                         Go语言
                         </a>
                     </p>
@@ -444,8 +980,33 @@
         <ul class="category-list">
             
             <li class="category-list-item">
-                <a class="category-list-link" href="https://zhaodj.github.io/categories/go%e8%af%ad%e8%a8%80">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/categories/c%E8%AF%AD%E8%A8%80">
+                    c语言
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/categories/go%E8%AF%AD%E8%A8%80">
                     go语言
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/categories/%E5%AE%B9%E5%99%A8">
+                    容器
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -453,6 +1014,7 @@
         </ul>
     </div>
 </div>
+
 
 
 
@@ -467,15 +1029,65 @@
         <ul class="category-list">
             
             <li class="category-list-item">
-                <a class="category-list-link" href="https://zhaodj.github.io/tags/gdb">
-                    gdb
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/apt">
+                    apt
                 </a>
                 <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/c">
+                    c
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/debian">
+                    debian
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/docker">
+                    docker
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/gdb">
+                    gdb
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://zhaodj.github.io/tags/go">
                     go
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhaodj.github.io/tags/mysql">
+                    mysql
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -483,6 +1095,7 @@
         </ul>
     </div>
 </div>
+
 
 
 
@@ -495,12 +1108,33 @@
     </h3>
     <div class="widget tagcloud">
         
+        
+        <a href="https://zhaodj.github.io/tags/apt" style="font-size: 12px;">apt</a>
+        
+        
+        <a href="https://zhaodj.github.io/tags/c" style="font-size: 12px;">c</a>
+        
+        
+        <a href="https://zhaodj.github.io/tags/debian" style="font-size: 12px;">debian</a>
+        
+        
+        <a href="https://zhaodj.github.io/tags/docker" style="font-size: 12px;">docker</a>
+        
+        
         <a href="https://zhaodj.github.io/tags/gdb" style="font-size: 12px;">gdb</a>
+        
         
         <a href="https://zhaodj.github.io/tags/go" style="font-size: 12px;">go</a>
         
+        
+        <a href="https://zhaodj.github.io/tags/linux" style="font-size: 12px;">linux</a>
+        
+        
+        <a href="https://zhaodj.github.io/tags/mysql" style="font-size: 12px;">mysql</a>
+        
     </div>
 </div>
+
 
 
 
@@ -514,7 +1148,7 @@
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016
+      &copy; 2017
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>
@@ -536,6 +1170,7 @@ ga('send', 'pageview');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
+
 <!-- MathJax -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -544,6 +1179,7 @@ MathJax.Hub.Config({
   });
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 </body>

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on 找不到军</title>
-    <link>https://zhaodj.github.io/tags/go/</link>
+    <link>https://zhaodj.github.io/tags/go/index.xml</link>
     <description>Recent content in Go on 找不到军</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Sep 2016 13:52:47 +0800</lastBuildDate>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <atom:link href="https://zhaodj.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -25,6 +25,12 @@
 &lt;h2 id=&#34;运行gdb&#34;&gt;运行GDB&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gdb demo -d &#39;$GOROOT&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果报下面的错误，是因为 MacOS 运行 GDB 需要给 GDB 程序签名，&lt;a href=&#34;http://stackoverflow.com/questions/18423124/please-check-gdb-is-codesigned-see-taskgated8-how-to-get-gdb-installed-w&#34;&gt;操作步骤&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Unable to find Mach task port for process-id 40764: (os/kern) failure (0x5).
+ (please check gdb is codesigned - see taskgated(8))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;给指定方法设置断点&#34;&gt;给指定方法设置断点&lt;/h2&gt;
